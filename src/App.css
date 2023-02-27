@@ -69,7 +69,7 @@ header {
 header h1 {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 2.5em;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
   width: 100%;
   text-align: center;
 }
@@ -203,19 +203,36 @@ footer {
   }
 
   header {
-    padding: 2em 0;
+    padding: 1.2em 0;
   }
 
   .header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    text-align: center;
     width: 90%;
+    gap: 1em;
   }
 
 
   .contact form {
     padding: 5em 0;
   }
+
+  header h1 {
+    font-size: 1.8em
+  }
+
+  header ul {
+    font-size: 0.8em;
+  }
+
+  
+.header-scrolled {
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+  top: -50px;
+}
+
 
 }
