@@ -1,0 +1,108 @@
+form {
+  width: 100%;
+  max-width: 30em;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .inputBox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  
+  input, textarea {
+    font-family: inherit;
+    font-size: 1.5em;
+    padding: 0.75em 0;
+    background-color: var(--backgroundColor);
+    border: none;
+    color: inherit;
+    outline: none;
+    width: 100%;
+    border-bottom: 1px solid rgb(172, 172, 172);
+  }
+  
+  label {
+    position: absolute;
+    top: 1em;
+    left: 0;
+    text-transform: uppercase;
+    pointer-events: none;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+    transition: 200ms;
+  
+  }
+  
+  textarea {
+    height: 150px;
+  }
+  
+
+
+  .inputBox input:valid ~ label,
+  .inputBox input:focus ~ label,
+  .inputBox textarea:valid ~ label,
+  .inputBox textarea:focus ~ label
+  {
+    color: var(--accentColor);
+    transform: translateY(-1.5em);
+    font-size: 1em;
+  }
+
+  .inputBox input:not(:placeholder-shown):invalid ~ label {
+    color: rgb(229, 82, 82);
+    transform: translateY(-1.5em);
+    font-size: 1em;
+  }
+  
+  .work h2 {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus, 
+  input:-webkit-autofill:active{
+      -webkit-box-shadow: 0 0 0 40px var(--backgroundColor) inset;
+      -webkit-text-fill-color: rgb(213, 213, 213) !important;
+  }
+
+  form button {
+    padding: 1em;
+    font-family: inherit;
+    font-size: 1.2em;
+    background: transparent;
+    color: inherit;
+    border: 1px solid white;
+    text-transform: uppercase;
+    transition: 400ms;
+  }
+
+  form button:hover {
+    cursor: pointer;
+    color: var(--accentColor);
+    border-radius: 24px;
+  }
+
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    opacity: 0;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    opacity: 0;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    opacity: 0;
+  }

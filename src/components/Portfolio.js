@@ -7,14 +7,17 @@ import dummy3 from '../images/dummyimg3.jpeg';
 
 function Porfolio() {
     return (
-        <div className="work-container" id="top">
-            <PortfolioCard name="My Movie" image={dummy1}/>
-            <PortfolioCard name="My Movie" image={dummy2}/>
-            <PortfolioCard name="My Movie" image={dummy3}/>
-            <PortfolioCard name="My Movie" image={dummy1}/>
-            <PortfolioCard name="My Movie" image={dummy2}/>
-            <PortfolioCard name="My Movie" image={dummy3}/>
-        </div>
+        <main className="portfolio">
+            <div className="work-container">
+                <PortfolioCard name="My Movie" image={dummy1} />
+                <PortfolioCard name="My Movie" image={dummy2} />
+                <PortfolioCard name="My Movie" image={dummy3} />
+                <PortfolioCard name="My Movie" image={dummy1} />
+                <PortfolioCard name="My Movie" image={dummy2} />
+                <PortfolioCard name="My Movie" image={dummy3} />
+            </div>
+        </main>
+
     )
 
 }

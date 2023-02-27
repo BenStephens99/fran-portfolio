@@ -1,24 +1,33 @@
 import React from "react";  
 import { Link } from "react-router-dom";
+import { useState } from "react";
+
 window.onscroll = function() {addShadow()}
 
 function addShadow (){
-    if(document.documentElement.scrollTop > 15) {
+    if(document.documentElement.scrollTop > 10) {
         document.getElementById("header").classList.add('header-scrolled');
     } else {
         document.getElementById("header").classList.remove('header-scrolled');
     }
 }
 
+
+
 function Header () {
+    const [currentSelected, setCurrentSelected] = useState(window.location.pathname)
+
+    function updateSelected () {
+        setCurrentSelected(window.location.pathname)
+    }
     return (
         <header id="header">
-        <div class="header-content">
+        <div className="header-content">
             <h1>Francis English</h1>
-            <ul>
-                <Link to="/about"><li>About</li></Link>
-                <Link to="/"><li>Porfolio</li></Link>
-                <Link to="/contact"><li>Contact</li></Link>
+            <ul onClick={updateSelected}>
+                <Link to="/about"><li className={currentSelected === "/about" ? "selected" : ""}>About</li></Link>
+                <Link to="/"><li className={currentSelected === "/" ? "selected" : ""}>Porfolio</li></Link>
+                <Link to="/contact"><li className={currentSelected === "/contact" ? "selected" : ""}>Contact</li></Link>
             </ul>
         </div>
     </header>
