@@ -63,17 +63,22 @@ header {
   flex-direction: column;
   align-items: center;
   row-gap: 2em;
+  width: 100%;
 }
 
 header h1 {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 2.5em;
   letter-spacing: 3px;
+  width: 100%;
+  text-align: center;
 }
 
 header ul {
-  display: inline-flex;
-  gap: 6em;
+  display: flex;
+  width: 95%;
+  max-width: 30em;
+  justify-content: space-around;
 }
 
 header li {
@@ -171,8 +176,6 @@ footer {
   background-color: var(--forgroundColor);
 }
 
-
-
 @media screen and (max-width: 1200px) {
   .work-container {
     grid-template-columns: 1fr 1fr;
@@ -183,6 +186,7 @@ footer {
   .work-container {
     grid-template-columns: 1fr;
     gap: 1em;
+    margin: 0;
   }
 
   .work {
@@ -194,14 +198,13 @@ footer {
   }
 
   main {
-    margin-top: 7.5em;
+    margin: 1em 0;
     width: 100%;
   }
 
   header {
     padding: 2em 0;
   }
-
 
   .header-content {
     display: flex;
@@ -210,8 +213,9 @@ footer {
     width: 90%;
   }
 
-  .header ul {
-    gap: 1em;
+
+  .contact form {
+    padding: 5em 0;
   }
 
 }
