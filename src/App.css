@@ -25,7 +25,7 @@ body {
   align-items: center;
   background-color: var(--backgroundColor);
   color: rgb(213, 213, 213);
-
+  font-size: 0.8em;
 }
 
 .App {
@@ -183,6 +183,10 @@ footer {
 }
 
 @media screen and (max-width: 850px) {
+  body {
+    font-size: 1em;
+  }
+
   .work-container {
     grid-template-columns: 1fr;
     gap: 1em;
